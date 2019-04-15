@@ -1,0 +1,94 @@
+<div class="wholepagestyle" id="firstmargin" 
+style="background-color: lightblue;border: solid;"><!--  wholepage opening tag -->
+<p *ngIf="show">
+  user works!
+</p>
+<div class="headerpage" style="display:inline">
+  <!-- Firstpage <t> Second Page </t>ONline Test -->
+    <ul class="nav nav-pills nav-justified">
+      <li (click)="hme()"><a href="#">Home</a></li>
+      <li><a href="#">After +2</a></li>
+      <li><a href="#">G Jobs</a></li>
+      <li (click)="ont()" *ngIf="otl"><a href="#" className="active">Online Test</a></li>
+    </ul>
+  </div><!--  header closing tag -->
+
+  <div class="welcomepage" *ngIf="welp"  style="border: solid;background-color:burlywood;">
+    <!--  welcompage opening tag -->
+        <h1 style="text-align:center">Free Online Test</h1>
+        <h2 style="text-align:center">Test Time is : 30 Min</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <P style="text-align:center"><button  type="button" (click)="starttestbut()" 
+        class="btn btn-primary btn-lg" name="strbut">Start Test</button></P>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- <h3>Let's Start</h3> 
+        
+    welcome page closing tag -->
+  
+<div *ngIf="otp" onmousedown='return false;' onselectstart='return false;'>
+   
+  <h1 style="text-align:center">Free Online Test</h1>   
+  <br>
+  <p>{{Repdata[incrno1].ques}}</p>
+      <form style="margin:25px" id=quesform  #quesForm="ngForm">
+        <div class="radio">
+          <input type="radio" name="option" [checked]="chkopt1status" (change)="chkopt1status=true" id="option1" (click)="opt1getvalue()" value="checking">
+          <p id="option1lbl">{{fet_option[a]}}</p>
+        </div>
+        <div class="radio">
+          <input type="radio" name="option" [checked]="chkopt2status" (change)="chkopt2status=true" id="option2" (click)="opt2getvalue()">
+          <p id="option2lbl" >{{fet_option[b]}}</p>
+      </div>
+        <div class="radio">
+          <input type="radio" name="option" [checked]="chkopt3status" (change)="chkopt3status=true" id="option3" (click)="opt3getvalue()">
+          <p id="option3lbl">{{fet_option[c]}}</p>
+        </div>
+        <div class="radio">
+          <input type="radio" name="option" [checked]="chkopt4status" (change)="chkopt4status=true" id="option4" (click)="opt4getvalue()">
+          <p id="option4lbl">{{fet_option[d]}}</p>
+            </div>
+      </form>
+      <button type="button" (click)="nxtbut()" onclick="nextbutton()" class="btn btn-primary btn-lg" id="nxtbutton">Next</button>
+    </div>
+
+
+
+
+<div *ngIf="resp" onmousedown='return false;' onselectstart='return false;'>
+<p style="text-align:center;font-size:20px">Welcome to Online Competitive Exam Training.</p>
+ 
+    
+   <p style="font-size: 30px;text-align: center"> <b>Your Mark is : {{mark}}/{{nofques}}</b></p>
+  
+
+<table border='1'>  
+  
+  
+  <tr>
+    <td>No</td>  
+    <td>Result</td>  
+  </tr>  
+  <tr *ngFor="let ind = index;let kk of Repdata">  
+       
+    <td>{{ind + 1}}</td>  
+    <td>{{kk.ques}}<br><br>Your Answer : {{fet_ans[ind]}}<br><br>Correct Answer :<b>{{kk.answer}}</b></td>
+    
+    
+       
+  </tr>  
+</table>  
+</div>
+<div class="footer">
+  <footer class="container-fluid">
+      <p style="text-align:center">Designed & Developed By Rajeshkanna</p>
+  </footer>
+</div> 
+</div>

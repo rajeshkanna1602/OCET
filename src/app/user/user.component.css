@@ -1,0 +1,13 @@
+ /* @import url("d:/ocet/ocet/CSS/bootstrap.min.css") */
+ /* @import url("d:/ocet/ocet/CSS/https\ _maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.min.js") */
+ .wholepagestyle
+ {
+   max-width: 1330px;
+   position: relative;
+   margin: auto;
+ }
+ footer {
+       background-color: #555;
+       color: white;
+       padding: 15px;
+     }

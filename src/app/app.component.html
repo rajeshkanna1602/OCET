@@ -1,0 +1,139 @@
+<!-- <div class="row"> -->
+
+<div >
+  <p style="size:48px">
+    Welcome to Question DB 
+    </p>
+      <form #userForm="ngForm"   (ngSubmit)="onSave(userForm.value)" novalidate>  
+  <p>Is "myForm" valid? {{userForm.valid}}</p>  
+ <table border='2'>  
+<tr>  
+<td>Category</td>  
+<td>   
+    <input name="id" hidden [(ngModel)]="id" />  
+     <select name="cate" [(ngModel)]="cate">
+       <option>English </option>
+      <option>Tamil </option>
+      <option>Social Science </option>
+      <option>Science </option>
+    </select>
+    
+ </td>  
+ </tr>  
+ <tr>
+  <td>Question :</td>  
+  <input style="width: 1006px; height:55px;" height="45" name="ques" type="text"  required  [(ngModel)]="ques" charset="utf-8"/>
+   </tr>
+  
+<tr>  
+    <td>Option1</td>  
+    <td>    <input name="opt1" required  type="text"   [(ngModel)]="opt1" /></td>  
+    </tr> 
+ <tr>  
+        <td>Option2</td>  
+        <td>    <input name="opt2" required  type="text"   [(ngModel)]="opt2" /></td>  
+        </tr> 
+<tr>  
+    <td>Option3</td>  
+    <td>    <input name="opt3" required  type="text"   [(ngModel)]="opt3" /></td>  
+    </tr> 
+<tr>  
+        <td>Option4</td>  
+        <td>    <input name="opt4" required  type="text"   [(ngModel)]="opt4" /></td>  
+        </tr> 
+          
+
+    <tr>  
+
+      <td>Answer</td>  
+      <td>    <input name="answer" required  type="text"   [(ngModel)]="answer" /></td>  
+      </tr>  
+    <tr>  
+        <td colspan="2">  
+    <input type="submit" value="{{valbutton}}" />  
+    </td>  
+    </tr>  
+ </table>  
+</form>   
+  
+<table border='1'>  
+  
+  <tr>  
+    <td>Id</td>  
+    <td>Name</td>  
+    <td>Address</td>  
+    <td>Edit</td>  
+    <td>Delete</td>  
+  </tr>  
+  <tr *ngFor="let kk of Repdata;let ind = index">  
+       
+    <td>{{ind + 1}}</td>  
+    <td>{{kk.cate}}</td>  
+    <td>{{kk.ques}}</td>  
+    <td>{{kk.opt1}}</td>  
+    <td>{{kk.opt2}}</td>  
+    <td>{{kk.opt3}}</td>  
+    <td>{{kk.opt4}}</td>  
+    <td>{{kk.answer}}</td>
+    <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td>  
+    <td><a (click)="delete(kk.ques)" style="color:blueviolet">Delete</a>  </td>  
+  </tr>  
+</table>  
+</div>
+
+<!-- <div class="column">
+  This is testing
+  <form #searchForm="ngForm"   (ngSubmit)="onSearch(sname.value)" novalidate>  
+     <p>Is "myForm" valid? {{searchForm.valid}}</p>  
+   <table border='2'>  
+  <tr>  
+  <td>name</td>  
+  <td>   
+       <input name="id" type="hidden"     [(ngModel)]="id" />   
+      <input name="sname" type="text"  required  [(ngModel)]="sname" />  
+    
+   </td>  
+  </tr>  
+  <tr>  
+    <td colspan="2">  
+<input type="submit" value="{{sbutton}}" />  
+</td>  
+</tr>  
+   </table>
+  </form>
+   <br>
+<table border="1">
+<tr>  
+  <td>Id</td>  
+  <td>Name</td>  
+  <td>Address</td>  
+  <td>Edit</td>  
+  <td>Delete</td>  
+</tr>  
+<tr *ngFor="let kk1 of searchdata;let ind1 = index">  
+       
+  <td>{{ind1 + 1}}</td>  
+  <td>{{kk1.name}}</td>  
+  <td>{{kk1.address}}</td>  
+  <td>{{kk1.mobno}}</td>
+  <td><a (click)="edit(kk1)" style="color:blueviolet">Edit</a></td>  
+  <td><a (click)="delete(kk1.name)" style="color:blueviolet">Delete</a>  </td>  
+</tr>   -->
+<!-- 
+  </table>
+  <p >Repdata : {{Repdata}}</p>
+  <p> Serach data :{{searchdata}} </p> -->
+  <!-- <table>
+    <tr *ngof="let kk1 of searchdata">
+      <tr>     
+       <td>{{ind1 + 1}}</td>   -->
+      <!-- <td>{{kk1.name}}</td>  
+      <td>{{kk1.address}}</td>  
+      <td>{{kk1.mobno}}</td>  -->
+      <!-- <td><a (click)="edit(kk1)" style="color:blueviolet">Edit</a></td>  
+      <td><a (click)="delete(kk1._id)" style="color:blueviolet">Delete</a>  </td>   -->
+     
+
+
+<!-- </div> -->
+<!-- </div> -->
